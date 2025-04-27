@@ -17,5 +17,5 @@ make install
 
 # Clean up
 cd ..
-rm -rf thc-hydra-${VERSION} hydra.tar.gz
+rm -rf thc_hydra thc_hydra.tar.gz
 clear
