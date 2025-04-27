@@ -4,23 +4,18 @@ apt install -y x11-repo clang make openssl openssl-tool wget openssh coreutils g
 clear
 
 # Official hydra repository
-VERSION="9.5"
-echo -e "${YELLOW}[*] Downloading Hydra (v${VERSION})...${NC}"
-wget https://github.com/vanhauser-thc/thc-hydra/archive/v${VERSION}.tar.gz -O hydra.tar.gz
+wget -O thc_hydra.tar.gz https://codeload.github.com/vanhauser-thc/thc-hydra/tar.gz/refs/tags/v9.5
 
 # Extract tarball
-echo -e "${YELLOW}[*] Extracting Hydra...${NC}"
-tar -xvzf hydra.tar.gz
-cd thc-hydra-${VERSION}
+tar -xvzf thc_hydra.tar.gz
+cd thc_hydra
 
 # Configure, compile, and install
-echo -e "${YELLOW}[*] Configuring and Compiling Hydra...${NC}"
 ./configure --prefix=$PREFIX
 make
 make install
 
 # Clean up
-echo -e "${YELLOW}[*] Cleaning up...${NC}"
 cd ..
 rm -rf thc-hydra-${VERSION} hydra.tar.gz
 clear
