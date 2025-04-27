@@ -10,5 +10,7 @@ apt update && apt install wget -y && wget -qO- https://raw.githubusercontent.com
 ```
 ### $${\color{yellow}More- Info}$$
 ```
-hydra --help
+hydra
 ```
+
+<img src="https://github.com/xiv3r/termux-hydra/blob/main/hydra.png">
